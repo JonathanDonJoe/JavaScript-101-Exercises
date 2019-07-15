@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>JavaScript 101 Exercises</title>
 </head>
 <body>
     <script>
     
     //1. Hello you
     function hello(name){
-        let reply ='';
-        if(name){
-            reply = `Hello, ${name}`;
-        } else{
-            reply = `Hello, World`;
-        }
+        // let reply ='';
+        // if(name){
+        //     reply = `Hello, ${name}`;
+        // } else{
+        //     reply = `Hello, World`;
+        // }
+        let reply = name ? `Hello, ${name}` : `Hello, World`
         document.write(reply)
     }
     // hello()
@@ -29,14 +30,21 @@
 
     //3. Tip Calculator
     function tipAmount(bill, service){
-        let tip;
-        if(service === 'good'){
-            tip = 0.20;
-        } else if(service === 'fair'){
-            tip = 0.15;
-        } else {
-            tip = 0.10;
-        }
+        // let tip;
+        // if(service === 'good'){
+        //     tip = 0.20;
+        // } else if(service === 'fair'){
+        //     tip = 0.15;
+        // } else {
+        //     tip = 0.10;
+        // }
+        let tip = service === "good"
+            ? 0.2
+            : service === "fair"
+                ? 0.15
+                :service === "poor"
+                    ? 0.1
+                    : 0;
         return bill * tip;
     }
     // document.write(tipAmount(100,'good'))
